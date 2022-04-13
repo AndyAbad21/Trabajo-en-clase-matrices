@@ -23,6 +23,7 @@ public class Clase2 {
         }else{
             System.out.println("No todos lo numeros de la cadena son numeros");
         }*/
+        //Ingreso de el numero de filas y columnas de las dos matrices
        Arreglo a=new Arreglo();
        int numf;
        int numc;
@@ -33,6 +34,7 @@ public class Clase2 {
        System.out.println("");
        
        int[][] matrizf1=a.crearMatriz(numf, numc);
+       System.out.println("MATRIZ 1");
        for(int i=0; i<numf; i++)
        {
            for(int j=0; j<numc; j++)
@@ -50,6 +52,7 @@ public class Clase2 {
        System.out.println("");
        
        int[][] matrizf2=a.crearMatriz(numf, numc);
+       System.out.println("MATRIZ 2");
        for(int i=0; i<numf; i++)
        {
            for(int j=0; j<numc; j++)
@@ -59,6 +62,49 @@ public class Clase2 {
            System.out.println("");
        }
        System.out.println("");
-            
+       
+       //Calculo de la suma de las dos matrices
+       System.out.println("La matris resultante es: ");
+       int[][] matrizs=a.sumarMatrices(matrizf1, matrizf2);
+       for(int i=0; i<matrizs.length; i++)
+       {
+           for(int j=0; j<matrizs[0].length; j++)
+           {
+               System.out.print(matrizs[i][j]+"  ");
+           }
+           System.out.println("");
+       }
+       System.out.println("");
+      
+       //Ingreso de tamanio del vector
+       System.out.println("Ingrese el tamanio de vector 1: ");
+       System.out.println("");
+       numf=scanner.nextInt();
+       int[] vector1=a.crearVector(numf);
+       System.out.println("VECTOR 1");
+       for(int i=0; i<vector1.length; i++)
+       {
+           System.out.print(vector1[i]+" ");
+       }
+       System.out.println("\n");
+       
+       System.out.println("Ingrese el tamanio de vector 2: ");
+       System.out.println("");
+       numf=scanner.nextInt();
+       int[] vector2=a.crearVector(numf);
+       System.out.println("VECTOR 2");
+       for(int i=0; i<vector2.length; i++)
+       {
+           System.out.print(vector2[i]+" ");
+       }
+       System.out.println("\n");
+       
+       System.out.println("Vector resultante : ");
+       int[] vectorf=a.sumarVectores(vector1, vector2);
+       for(int i=0; i<numf; i++)
+       {
+           System.out.print(vectorf[i]+" ");
+       }
+       System.out.println("\n");
     }
 }
