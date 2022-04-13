@@ -82,10 +82,10 @@ public class Arreglo
         }
         return matriz;
     }
-    public int[][] sumarMatrices(int[][] m1, int[][] m2)
+   /* public int[][] sumarMatrices(int[][] m1, int[][] m2)
     {
         int matriz
-    }
+    }*/
    
     
 }
